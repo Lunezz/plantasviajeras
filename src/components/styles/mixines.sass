@@ -1,0 +1,124 @@
+=input
+	padding: 15px
+	outline: none
+	border: none
+	font-size: 16px
+=a
+	cursor: pointer
+
+=ul
+	padding-inline-start: 0px !important
+	margin-block-end: 0px !important
+	margin-block-start: 0px !important
+
+
+=bx($value: border-box)
+    -moz-box-sizing: $value
+    -webkit-box-sizing: $value
+    box-sizing: $value
+
+=flex($imp: '')
+	display: -webkit-box #{$imp}
+	display: -moz-box #{$imp}
+	display: -ms-flexbox #{$imp}
+	webkit-display: -webkit-flex #{$imp}
+	display: -webkit-flex #{$imp}
+	display: flex #{$imp}
+
+=flexDir($dir: row)
+	flex-direction: $dir
+	-webkit-box-direction: $dir
+	-moz-box-direction: $dir
+	-ms-box-direction: $dir
+	-webkit-flex-direction: $dir
+	-ms-flex-direction: $dir
+
+
+=center($value: v)
+	position: absolute
+	@if $value == v
+		-webkit-transform: translateX(-50%)
+		-moz-transform: translateX(-50%)
+		-ms-transform: translateX(-50%)
+		transform: translateX(-50%)
+		left: 50%
+	@else if $value == h
+		-webkit-transform: translateY(-50%)
+		-moz-transform: translateY(-50%)
+		-ms-transform: translateY(-50%)
+		transform: translateY(-50%)
+		top: 50%
+	@else if $value == vh
+		-webkit-transform: translate(-50%, -50%)
+		-moz-transform: translate(-50%, -50%)
+		-ms-transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%)
+		top: 50%
+		left: 50%
+
+	@else if $value == r
+		-webkit-transform: translate(0%, 0%)
+		-moz-transform: translate(0%, 0%)
+		-ms-transform: translate(0%, 0%)
+		transform: translate(0%, 0%)
+		position: inherit
+		top: inherit
+		left:  inherit
+	@else if $value == rv
+		-webkit-transform: translate(-50%, 0%)
+		-moz-transform: translate(-50%, 0%)
+		-ms-transform: translate(-50%, 0%)
+		transform: translate(-50%, 0%)
+		top: inherit
+		left: 50%
+	@else if $value == rh
+		-webkit-transform: translate(0%, -50%)
+		-moz-transform: translate(0%, -50%)
+		-ms-transform: translate(0%, -50%)
+		transform: translate(0%, -50%)
+		top: 50%
+		left:  inherit
+
+
+=h1($size, $color, $margin, $align, $font)
+	font-size: $size
+	font-weight: 300
+	color: $color
+	+bx
+	margin: $margin
+	margin-bottom: 30px
+	text-align: $align
+	font-family: $font
+
+=btn($background, $color, $hover, $colorHover)
+	padding: 15px
+	appearance: none
+	background-color: $background
+	cursor: pointer
+	outline: none
+	color: $color
+	font-size: 15px
+	border: transparent
+	&:hover
+		background-color: $hover
+		color: $colorHover
+
+=flexWrap($dir: wrap)
+	flex-wrap: $dir
+	-webkit-box-wrap: $dir
+	-webkit-flex-wrap: $dir
+	-ms-flex-wrap: $dir
+
+=justifyCont($dir: space-between)
+	justify-content: $dir
+	-webkit-justify-content: $dir
+	-moz-justify-content: $dir
+	-ms-flex-pack: $dir
+	@if $dir == "flex-end"
+		-ms-flex-pack: end
+	@if $dir == "flex-start"
+		-ms-flex-pack: start
+	@if $dir == "space-around"
+		-ms-flex-pack: justify
+	@if $dir == "space-between"
+		-ms-flex-pack: justify

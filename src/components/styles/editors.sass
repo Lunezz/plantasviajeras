@@ -1,0 +1,97 @@
+@import ./variables.sass
+@import ./mixines.sass
+@import ./media.sass
+
+.editor
+    margin: auto
+    text-align: center
+    width: 100%
+    padding: 20px
+    position: relative
+    +bx
+    &:before
+        content: ''
+        width: 30%
+        height: 2px
+        background-color: $grisMenu
+        position: absolute
+        top: 65px
+        right: 50px
+    &:after
+        content: ''
+        width: 30%
+        height: 2px
+        background-color: $grisMenu
+        position: absolute
+        top: 65px
+        left: 50px
+    +mediaMax480
+        &:before
+            right: 10px
+        &:after
+            left: 10px
+        .padding
+            padding: 0 !important
+
+.title2
+    font-size: 40px
+    font-family: $font4
+
+.picks
+    background-image: url('../../assets/editors-pick.svg')
+    background-size: cover
+    background-repeat: no-repeat
+    object-fit: cover
+    width: 60px
+    height: 100px
+    margin: auto
+.itemEditor
+    +flex
+    padding: 40px
+    +bx
+    .imgItem
+        width: 100%
+        height: auto
+        overflow: hidden
+    +mediaMax780
+        +flexWrap
+        padding: 0px
+    .info
+        background-color: #fafafa
+        padding: 25px
+        +bx
+        p, h3,
+            width: 100%
+.info
+    margin: 0px 5px
+    .imgAtributo
+        width: 40px
+        height: 40px
+        margin: 20px auto
+        width: 100%
+    .nameAtributo
+        width: 100%
+        height: 30px
+        margin: 20px auto
+.cardFicha
+    background-color: $grisMenu
+    color: white
+    width: 40%
+    height: 100px
+    margin: auto
+    margin-top: -20px
+    z-index: 1
+    margin-bottom: 10px
+    border: 2px solid white
+    p
+        padding: 15px
+        +bx
+        &.line
+            border-bottom: 1px solid white
+            width: 90%
+            margin: auto
+.linkFicha
+    font-size: 12px
+    cursor: pointer
+    &:hover
+        color: $rosa

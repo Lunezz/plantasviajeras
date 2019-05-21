@@ -1,0 +1,74 @@
+@import ./mixines.sass
+@import ./media.sass
+@import ./variables.sass
+
+body
+    margin: 0
+    padding: 0
+    width: 100%
+
+.charge
+    margin: auto
+    text-align: center
+    padding: 20px
+    color: lightgray
+.padding
+    padding: 40px
+    +bx
+.marginT_40
+    margin-top: 40px
+.marginL_5
+    margin-left: 5px
+.marginL_10
+    margin-left: 10px
+.marginR_5
+    margin-right: 5px
+.marginB_5
+    margin-bottom: 5px
+.marginB_10
+    margin-bottom: 10px
+.marginT_5
+    margin-top: 5px
+.marginB_0
+    margin-bottom: 0px !important
+.marginR_0
+    margin-right: 0px !important
+
+p
+    margin: 0px
+section
+    margin-top: 80px
+.positionA
+    position: absolute
+.positionR
+    position: relative
+.bottom_10
+    bottom: 10px
+.white
+    color: white
+.centrado
+    margin: auto
+    text-align: center
+.width100
+    width: 100%
+    min-width: 100%
+    max-width: 100%
+.width50
+    width: 50%
+.flex
+    +flex
+.flex-wrap
+    +flexWrap
+
+.col2
+    width: 50%
+    +flex
+    +mediaMax780
+        width: 100%
+
+.col3
+    width: 30%
+    +flex
+    +mediaMax780
+        width: 100%
+       

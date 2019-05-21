@@ -1,0 +1,59 @@
+@import ./variables.sass
+@import ./mixines.sass
+@import ./media.sass
+
+@keyframes exploradora
+    0% 
+        margin-top: 0px
+        margin-bottom: 0px
+    50% 
+        margin-top: 10px
+        margin-bottom: 30px
+    100% 
+        margin-top: 0px
+        margin-bottom: 0px
+.hero
+    position: relative
+    +bx
+    width: 100%
+    height: 529px
+    background-size: cover
+    background-image: url('../../assets/copa-flores.jpg')
+   
+    +mediaMax780
+        background-image: url('../../assets/copa-flores.jpg')
+        background-size: cover
+        background-repeat: no-repeat
+        object-fit: cover
+        width: 100%
+        height: 280px
+    +mediaMax480
+        height: 380px
+.title1
+    position: absolute
+    +h1(50px, white, auto, center, $font4)
+    +center
+    top: 200px
+    width: 80%
+    +mediaMax1024
+        +h1(40px, black, auto, center, $font4)
+        background-color: white
+        opacity: 0.8
+        width: 60%
+        top: 150px
+    +mediaMax780
+        font-size: 24px
+        top: 100px
+
+.animacion-catarina
+    width: 100%
+    margin: auto
+    text-align: center
+    +flex
+    +flexWrap
+    .catarina
+        margin: auto
+        animation: exploradora 5s infinite
+    p
+        width: 100%
+        padding: 20px

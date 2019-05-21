@@ -1,0 +1,40 @@
+@import ./variables.sass
+@import ./mixines.sass
+
+.menuTipos
+    list-style: none
+    margin: auto
+    text-align: center
+    padding-inline-start: 0px
+    margin-block-start: 0px
+    margin-block-end: 0px
+    +flex
+    li
+        margin: auto 0px
+        width: calc(25% - 0px)
+        background-color: $grisMenu
+        color: white
+        display: inline-block
+        cursor: pointer
+        +bx
+        &:hover
+            opacity: 1
+            background-color: $rosa
+        appearance: none
+        +flex
+        +flexDir(column)
+        color: white
+        text-decoration: none
+        padding: 20px
+        // &:hover
+        //     color: $grisMenu
+        img
+            max-height: 50px
+            margin-bottom: 10px
+        
+        
+    p
+        padding: 0px
+        margin: 0px
+        .charge
+            color: #dddddd
